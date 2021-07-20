@@ -1,0 +1,110 @@
+<!-- 
+   NAME: Carrie Aubin
+   EMAIL: aubinca@sheridancollege.ca
+   CREATED: 2021-06-30
+   UPDATED: 2021-07-03
+   DESCRIPTION: HTML page for Covid-19 stats
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Canada</title>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://www.songho.ca/js/Logger.js"></script>
+    <script src="js/Covid-19.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+    <h1>COVID-19 Canada</h1>
+
+    <div class="row">
+        <div class="col" id="statBlock">
+            <div>
+                <label for="province">Province</label>
+                <br>
+                <select name="province" id="province">
+                    <option value="CA" selected="selected">Canada</option>
+                    <option value="ON">Ontario</option>
+                    <option value="QC">Quebec</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="AB">Alberta</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NL">Newfoudland and Labrador</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="YT">Yukon</option>
+                </select>
+            </div>
+            &nbsp;
+            <div id="dateDiv">
+                <label for="date">Date: </label>
+                <!-- placeholder for date -->
+                <label id="date"></label>
+                &emsp;
+                <span>
+                <button id="btnPrev">
+                    <img src="images/left.png">
+                </button>
+                <button id="btnNext">
+                    <img src="images/right.png">
+                </button> 
+                </span>
+            </div>
+            <br><br>
+            <div class="tableCases">
+                <label for="cases">Confirmed Cases</label>
+                <table>
+                    <tr>
+                        <td>Daily</td>
+                        <td>Total</td>
+                    </tr>
+                    <tr>
+                        <td id="dailyStat"></td>
+                        <td id="totalStat"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col" id="chartBlock">
+            <canvas id="chart"></canvas>
+        </div>
+        <div class="col" id="totalChart">
+            <canvas id="total"></canvas>
+        </div>
+    </div>
+
+    <br><br>
+    &emsp;
+    <div id="tableBlock">
+        <!-- table -->
+    <table class="tableInfo">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Today Confirmed</th>
+                <th>Total Confirmed</th>
+                <th>Today Tested</th>
+                <th>Total Tested</th>
+                <th>Today Deaths</th>
+                <th>Total Deaths</th>
+            </tr>
+        </thead>
+        <!-- placeholder for stats -->
+        <tbody id="tablebody"></tbody>
+    </table>
+    </div>
+</body>
+</html>

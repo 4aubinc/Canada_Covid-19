@@ -1,0 +1,118 @@
+body {
+    margin:10px;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+.row {
+    display:flex;
+    flex-wrap:wrap;
+    min-height: 300px;
+}
+.col {
+    margin:10px;
+    min-height: 300px;
+}
+
+#statBlock{
+    flex:1 0 200px;
+}
+
+#chartBlock{
+    flex:1 0 300px;
+    position:relative;
+    width:50vw;
+    height:300px;
+    overflow:hidden;
+}
+
+#totalChart{
+    flex:1 0 300px;
+    position:relative;
+    width:50vw;
+    height:300px;
+    overflow:hidden;
+}
+
+select{
+    width: 100%;;
+    height: 30px;
+    font-size: 24px;
+    background-color:rgb(232, 231, 231);
+}
+
+label{
+    font-size: 20px;
+}
+
+button{
+    background: transparent;
+    border:none;
+    width:fit-content;
+}
+
+button:hover{
+    background: #e4e1e1;
+}
+
+img{
+    
+    height: 25px;
+    width: 25px;
+}
+
+table{
+    width: 100%;
+}
+
+.tableCases th{
+    padding: 0.5em;
+    text-align: center;
+    font-size: 30px;
+}
+
+.tableCases td{
+    padding: 0.5em;
+    text-align: center;
+    font-size: 30px;
+}
+
+.tableInfo thead th{
+    position: sticky;
+    top: 0;
+    background: #d9d9d9;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.tableInfo td{
+    text-align: center;
+    font-size: 16px;
+}
+
+.tableInfo tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#dailyStat{
+    color:rgb(0, 145, 255);
+    font-weight: bold;
+}
+
+#totalStat{
+    color:red;
+    font-weight: bold;
+}
+
+#dailyChart{
+    width: 100%;
+}
+
+#tableBlock{
+    overflow-y: auto;
+    height: 450px;
+    margin: 10px;
+}
